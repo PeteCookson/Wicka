@@ -1,10 +1,11 @@
-<div id="navbar" class="row bg-white pt-lg-2">
-    <div class="col-auto col-md-3 my-auto py-1 py-lg-0">
-        <a href="{% url 'home' %}" class="nav-link main-logo-link">
-            <img src="/static/images/wicka_logo.webp" alt="Logo for Wicka" class="logo">
-        </a>
-    </div>
-    <div class="col-12 col-lg-9 my-auto ml-auto d-none d-lg-flex justify-content-end">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a href="{% url 'home' %}" class="navbar-brand nav-link main-logo-link">
+        <img src="/static/images/wicka_logo.webp" alt="Logo for Wicka" class="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse col my-auto ml-auto justify-content-end" id="main-nav">
         <ul class="list-inline list-unstyled text-center text-lg-right">
             <li class="list-inline-item">
                 <a class="navbar-item" href="#" id="hampers" aria-haspopup="true" aria-expanded="false">
@@ -15,9 +16,13 @@
                     <div class="mx-3">About</div>
             </li>
             <li class="list-inline-item">
-                <a class="navbar-item" href="#" id="about" aria-haspopup="true" aria-expanded="false">
+                <a class="navbar-item" href="#" id="blog" aria-haspopup="true" aria-expanded="false">
                     <div class="mx-3">Blog</div>
             </li>
+        </ul>
+    </div>
+    <div class="col my-auto justify-content-end">
+        <ul class="list-inline list-unstyled">
             <li class="list-inline-item dropdown">
                 <a class="navbar-item nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="text-center">
@@ -45,7 +50,7 @@
                             {% if grand_total %}
                             ${{ grand_total|floatformat:2 }}
                             {% else %}
-                            <!--$0.00-->
+                            $0.00
                             {% endif %}
                         </p>
                     </div>
@@ -53,4 +58,4 @@
             </li>
         </ul>
     </div>
-</div>
+</nav>
