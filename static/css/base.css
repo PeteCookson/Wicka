@@ -1,0 +1,199 @@
+html {
+    height: 100%;
+}
+
+body {
+    /* from B.A */
+    /*height: calc(100vh - 164px);*/
+    height: auto;
+    color: #555;
+    font-family: 'Merriweather', sans-serif;
+}
+
+.hero {
+    /*background: url('/media/homepage-background-cropped.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    height: 100vh;
+    background: url('/media/homepage-background-cropped.jpg') top center no-repeat;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: flex-end;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+h3,
+h2 {
+    font-weight: 300;
+}
+
+.logo {
+    width: 200px;
+}
+
+.navbar-item,
+.best-sellers {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: black;
+}
+
+.navbar-item:hover {
+    color: #006D77;
+    text-decoration: none;
+    /*transition: .5s;
+    transform: scale(2.1);*/
+}
+
+.carousel {
+    background-color: #FFDDD2;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+a.carousel:hover {
+    color: #006D77;
+    text-decoration: none;
+}
+
+#client-testimonial-carousel {
+    min-height: 200px;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/*.logo-font {
+    text-transform: uppercase;
+}*/
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: #E29578;
+    color: white;
+    min-width: 260px;
+    font-family: 'lato';
+    text-transform: uppercase;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #006D77;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/* -------------------------------- Index */
+
+.client-name.footer {
+    font-style: italic;
+}
+
+/* -------------------------------- Footer */
+
+.footer {
+    background-color: #006D77;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.phone:hover,
+.fa-phone:hover,
+.email:hover,
+.fa-envelope-open:hover,
+.footer-links a:hover,
+.social a:hover {
+    color: #E29578;
+    text-decoration: none;
+}
+
+.phone,
+.email,
+.footer-links a,
+.social a {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+}
+
+.social i {
+    font-size: 1.5rem;
+    padding-left: 4rem;
+}
+
+.social {
+    color: white;
+}
+
+.social {
+    padding-top: 23px;
+}
+
+.phone,
+.email,
+    {
+    color: white;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {}
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
