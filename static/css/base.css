@@ -4,17 +4,12 @@ html {
 
 body {
     /* from B.A */
-    /*height: calc(100vh - 164px);*/
     height: auto;
     color: #555;
     font-family: 'Merriweather', sans-serif;
 }
 
 .hero {
-    /*background: url('/media/homepage-background-cropped.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;*/
     height: 100vh;
     background: url('/media/homepage-background-cropped.jpg') top center no-repeat;
     background-size: cover;
@@ -49,8 +44,6 @@ h2 {
 .navbar-item:hover {
     color: #006D77;
     text-decoration: none;
-    /*transition: .5s;
-    transform: scale(2.1);*/
 }
 
 .carousel {
@@ -79,10 +72,6 @@ a.carousel:hover {
     width: 1.5rem;
 }
 
-/*.logo-font {
-    text-transform: uppercase;
-}*/
-
 .main-logo-link {
     width: fit-content;
 }
@@ -92,6 +81,7 @@ a.carousel:hover {
     color: white;
     min-width: 260px;
     font-family: 'lato';
+    font-weight: 300;
     text-transform: uppercase;
 }
 
@@ -185,13 +175,13 @@ a.carousel:hover {
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
-    .fixed-top-desktop-only {
+    /*.fixed-top-desktop-only {
         position: fixed;
         top: 0;
         right: 0;
         left: 0;
         z-index: 1030;
-    }
+    }*/
 
     .header-container {
         padding-top: 164px;
