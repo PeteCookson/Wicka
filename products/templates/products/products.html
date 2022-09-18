@@ -4,9 +4,58 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col">
-            {{ products}}
+        {% for product in products %}
+        <div class="col-sm-8 col-md-8 col-lg-3 d-flex m-2 card">
+            <div>
+                {% if product.image %}
+                <a href="{% url 'product_detail' product.id %}">
+                    <img class="card-img-top py-3 img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                </a>
+                {% else %}
+                <a href="{% url 'product_detail' product.id %}">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                </a>
+                {% endif %}
+                <a role="button" data-toggle="collapse" href="#coll_{{ product.id }}" role="button" aria-expanded="false" aria-controls="coll_{{ product.id }}">
+                    <h3 class="text-center product-name">{{ product.name }}</h3>
+                </a>
+            </div>
         </div>
+
+        <div class="collapse" id="coll_{{ product.id }}">
+            <div class="row">
+
+                <div class="col">
+                    {% if product.image %}
+                    <a>
+                        <img class="card-img-top py-3 img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    </a>
+                    {% else %}
+                    <a href="">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                    </a>
+                    {% endif %}
+                </div>
+                <div class="col">
+                    <div>
+                        <h4 class="">{{ product.name }}</h4>
+                    </div>
+                    <div class="">
+                        <p class="">£{{ product.price }}</p>
+                    </div>
+                    <div class="">
+                        <p class="">{{ product.description }}</p>
+                    </div>
+                    <div class="my-5">
+                        <h4>
+                            <a href="" class="shop-now-button btn btn-lg rounded-lg py-3">add to basket</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
     </div>
 </div>
 {% endblock %}

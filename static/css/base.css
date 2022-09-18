@@ -79,9 +79,9 @@ a.carousel:hover {
 .shop-now-button {
     background: #E29578;
     color: white;
-    min-width: 260px;
+    min-width: 200px;
     font-family: 'lato';
-    font-weight: 300;
+    font-weight: 400;
     text-transform: uppercase;
 }
 

@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col best-sellers pt-5">
+            <h3 class="text-center">Top Selling Hampers</h3>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <!-- Showing the three highest rated products -->
+    <div class="row pt-3">
+        {% for product in products %}
+        <!-- product cards -->
+        <div class="col-sm-6 col-md-6 col-lg-4">
+            <div class="card">
+                <!-- Product image -->
+                {% if product.image %}
+                <a href="">
+                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                </a>
+                {% else %}
+                <a href="#">
+                    <img class="card-img-top img-fluid" src="" alt="{{ product.name }}">
+                </a>
+                {% endif %}
+                <div class="card-body">
+                    <!-- product name -->
+                    <div class="product-name text-center">
+                        <h3 class="">{{ product.name }}</h3>
+                    </div>
+                    <div class="row py-2 text-secondary">
+                        <div class="col">
+                            <!-- product price -->
+                            <p class="lead mb-0 text-center font-weight-bold">£{{ product.price }}</p>
+                            <p class="lead mb-0 text-center font-weight-bold">{{ product.rating }} out of 5</p>
+                        </div>
+                    </div>
+                    <a href="" class="shop-now-button btn rounded-lg py-3">add to basket</a>
+                    <!-- product details -->
+                    <a href="" class="btn btn-small view-btn">View Details</a>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

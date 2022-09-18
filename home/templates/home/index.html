@@ -11,7 +11,7 @@
             </h1>
             <div class="my-5">
                 <h4>
-                    <a href="" class="shop-now-button btn btn-lg rounded-lg py-3">Shop Hampers</a>
+                    <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-lg py-3">Shop Hampers</a>
                 </h4>
             </div>
         </div>
@@ -22,47 +22,5 @@
         Curated & locally sourced wherever your stay Supporting independent startups & producers
     </h2>
 </div>
-<!-- Best sellers -->
-<div class="container-fluid">
-    <div class="row">
-        <div class="col best-sellers py-5">
-            <h3 class="text-center">Top Selling Hampers</h3>
-            <hr class="w-50 mb-1">
-        </div>
-    </div>
-    <!-- Showing the three highest rated products -->
-    <div class="row">
-        {% for product in products %}
-        <!-- product cards -->
-        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-            <div class="card products-preview">
-                <!-- Product image -->
-                {% if product.image %}
-                <a href="#">
-                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                </a>
-                {% else %}
-                <a href="#">
-                    <img class="card-img-top img-fluid" src="{% static 'images/no_image.png' %}" alt="{{ product.name }}">
-                </a>
-                {% endif %}
-                <div class="card-body">
-                    <!-- product name -->
-                    <div class="product-name text-center">
-                        <p class="text-secondary">{{ product.name }}</p>
-                    </div>
-                    <div class="row py-2 text-secondary">
-                        <div class="col">
-                            <!-- product price -->
-                            <p class="lead mb-0 text-center font-weight-bold">£{{ product.price }}</p>
-                        </div>
-                    </div>
-                    <!-- product details -->
-                    <a href="{% url 'product_detail' product.id %} " class="btn btn-small view-btn">View Details</a>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-</div>
+
 {% endblock %}
