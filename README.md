@@ -1,13 +1,23 @@
 # **WICKA**
 ## The locally sourced luxury arrival hamper company
 
+This website is designed and created for the Full Stack Frameworks with Django Milestone Project, for Code Institute's Diploma in Web Application Development.
+The objective for this milestone project is to plan, design and develop a project with all the functionalities to work as an actual e-commerce website.
+
+WICKA - Is a luxury hamper delivery company....
+
+
+
 ("Responsive Mockup")
 
-**[Live Site](https://poddly.herokuapp.com/)**
+**[View live version of website via Heroku](https:/wicka.herokuapp.com/)**
 
-## **Table of Contents**
+<br>
+<hr>
 
-* [UX](#UX)
+<a></a>
+## Table of Contents 
+* [UX](#ux)
     * [Strategy](#strategy)
         * [Site Owner Goals](#site-owner-goals)
         * [External User Goals](#external-user-goals)
@@ -20,16 +30,32 @@
     * [Surface](#surface)
         * [Colour Palette](#colour-palette)
         * [Typography](#typography)
-* [Technologies Used](#technologies-used)
-* [Bugs & Testing](#bugs-and-testing)
+    * [Existing Features](#existing-features)
+    * [Future Features](#future-features)
+    * [Technologies Used](#technologies-used)
+        * [Languages](#languages)
+        * [Libraries](#libraries)
+        * [Tools](#tools)
+        * [Design](#design)
+    * [Bugs & Testing](#bugs-and-testing)
+    * [Deployment](#deployment)
+    * [Credits](#credits)
 
-## **UX** 
+<br>
+<hr>
+
+<a name="ux"></a>
+## **UX**
+<a></a> 
+
+<a></a>
 ## **Strategy**
 --- 
 #### **Site Owner Goals**
 #### **External User Goals**
 #### **Returning User Goals**
 
+<a></a>
 ## **Scope**
 ---
 ### **Feature Ideas Table**
@@ -57,11 +83,30 @@ Tablet
 ## **Surface**
 ---
 ### **Colour Palette**
+[Coolors](https://coolors.co) was used to create the colour palette.
+<details><summary>Colour Palette</summary>
+
+![Colour Palette](/readme_assets/palette.png)
+
+</details>
+<br>
 
 ### **Typography**
 
-The website uses the Google Fonts library to provide the fonts:
+The website uses the [Google Fonts](https://fonts.google.com/) library to provide the fonts:
 
+<details>
+<summary>Typography</summary>
+
+![Typography](/readme_assets/palette.png)
+
+</details>
+<br>
+
+## **Existing Features**
+---
+## **Future Features**
+---
 ## **Technologies Used** 
 ---
 ### Languages
@@ -73,38 +118,23 @@ The primary languages used throughout the development of this project are:
 * [Python3](https://www.python.org/downloads/)
 * [JavaScript](https://www.javascript.com/)
 
-### Database
+### Libraries
 
-* [MongoDB](https://www.mongodb.com/)
+### Tools
 
-### Front-End Libraries
-
-* [Bootstrap](https://getbootstrap.com//)
-* [Google Fonts](https://fonts.google.com/)
-* [FontAwesome](https://fontawesome.com/)
-
-### Back-End Libraries
-
-* [Flask](https://flask.palletsprojects.com/en/2.0.x/) - The microservice Flask framework is used to handle routing and serving of HTML pages displaying front-end content.
-* [Flask-PyMongo](https://docs.mongodb.com/drivers/pymongo/) - Flask's extension 'Flask-PyMongo' is the language used to interact between Flask and the MongoDB database. It handles the data inputted through the website's forms and sends it to the database, as well as retrieving it from the database to be served onto the client's screen.
-* [jQuery](https://jquery.com/) - The developer used fairly heavy use of jQuery's AJAX for certain features of the website, including the 'like' buttons and search side-bar in the 'Browse Tracks' page, as well as the functionality to remove liked tracks in the 'User Profile' page.
-* [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/) - The WSGI web-application library Werkzeug was used to generate hashed passwords, therefore providing password security for the client.
+### Design
 
 ### Other Technologies
-* [Google Chrome Devtools](https://developer.chrome.com/docs/devtools/)
-* [Favicon.io](https://favicon.io//)
-* [XD](https://www.adobe.com/uk/products/xd.html/) - Wireframes were made using Adobe XD software
-* [Random Keygen](https://randomkeygen.com/)
 
 ## **Bugs and Testing**
 Bugs & Testing information can be found in the seperate [bugs & testing](/TESTING.md) file.
-## Credits
 
 ## Deployment
 
 The site is hosted on heroku.com.
 
 Deployment of the site has been achieved by the steps following below, outlined in the Code Institue Walkthorugh Project:
+## Credits
 
 ## Acknowledgements
 
@@ -113,6 +143,7 @@ Deployment of the site has been achieved by the steps following below, outlined 
 * My mentor, Spencer Barriball, has been supportive and encouraging throughout this project. 
 * The Tutor Support on Code Institute has also been valuable resourse for this project. 
 
+#### Back to [top](#table-of-contents)
 
 - Bugs and solutions
 - Technologies 
