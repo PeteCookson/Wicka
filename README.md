@@ -10,7 +10,7 @@ WICKA - Is a luxury hamper delivery company....
 
 ("Responsive Mockup")
 
-**[View live version of website via Heroku](https:/wicka.herokuapp.com/)**
+**View live version of [website](https:/wicka.herokuapp.com/)**
 
 <br>
 <hr>
