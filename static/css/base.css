@@ -115,6 +115,10 @@ a.carousel:hover {
     border: 1px solid black !important;
 }
 
+.remove-item {
+    cursor: pointer;
+}
+
 /* -------------------------------- Index */
 
 .client-name.footer {
