@@ -22,7 +22,7 @@
 }
 
 .stripe-style-input::placeholder {
-    color: #aab7c4;
+    color: #edf6f9;
 }
 
 .fieldset-label {
@@ -51,11 +51,11 @@
 }
 
 .StripeElement--webkit-autofill {
-    background-color: #fefde5 !important;
+    background-color: #edf6f9 !important;
 }
 
 .stripe-style-input::placeholder {
-    color: #aab7c4;
+    color: #555;
 }
 
 .fieldset-label {
@@ -67,4 +67,24 @@
 #card-element {
     color: #000;
     border: 1px solid #555;
+}
+
+#loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #EDF6F9;
+    z-index: 9999;
+}
+
+.loading-spinner {
+    background-image: url(/media/wicka-logo.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    margin: 0;
+    height: 100%;
 }

@@ -14,7 +14,7 @@ var style = {
         color: '#000',
         fontFamily: '"Merriweather", Helvetica, sans-serif',
         fontSmoothing: 'antialiased',
-        fontSize: '16px',
+        fontSize: '14px',
         '::placeholder': {
             color: '#aab7c4'
         }
@@ -54,6 +54,8 @@ form.addEventListener('submit', function(ev) {
         'disabled': true
     });
     $('#submit-button').attr('disabled', true);
+    $('#payment-form').fadeToggle(100);
+    $('#loading-overlay').fadeToggle(100);
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
             card: card,
@@ -67,6 +69,8 @@ form.addEventListener('submit', function(ev) {
                 </span>
                 <span>${result.error.message}</span>`;
             $(errorDiv).html(html);
+            $('#payment-form').fadeToggle(100);
+            $('#loading-overlay').fadeToggle(100);
             card.update({
                 'disabled': false
             });
