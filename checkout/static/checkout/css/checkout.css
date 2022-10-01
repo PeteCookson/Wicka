@@ -81,7 +81,7 @@
 }
 
 .loading-spinner {
-    background-image: url(/media/wicka-logo.gif);
+    background-image: url(/media/wicka_logo.gif);
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
