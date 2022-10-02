@@ -62,7 +62,7 @@
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="small mb-0 text-black font-weight-bold">
-                            {{ item.product.name }}
+                            {{ item.product.name }}{% if item.product_size %} - Size {{ item.product.size|upper }}{% endif %}
                         </p>
                     </div>
                     <div class="col-12 col-md-8 text-md-right">
@@ -106,6 +106,17 @@
                 </div>
                 {% endif %}
 
+                {% if order.county %}
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">County</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">{{ order.county }}</p>
+                    </div>
+                </div>
+                {% endif %}
+
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 text-black font-weight-bold">Town or City</p>
@@ -118,7 +129,7 @@
                 {% if order.postcode %}
                 <div class="row">
                     <div class="col-12 col-md-4">
-                        <p class="mb-0 text-black font-weight-bold">Postcode</p>
+                        <p class="mb-0 text-black font-weight-bold">Postal Code</p>
                     </div>
                     <div class="col-12 col-md-8 text-md-right">
                         <p class="mb-0">{{ order.postcode }}</p>
@@ -169,32 +180,22 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-12 col-lg-7 text-right">
-                        <!-- {% if from_profile %}
-                        <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
-                            <span class="icon mr-2">
-                                <i class="fas fa-angle-left"></i>
-                            </span>
-                            <span class="text-uppercase">Back to Profile</span>
-                        </a>
-                        {% else %} -->
-                        <div class="col-12 col-md-4">
-                            <p class="mb-0 text-black font-weight-bold">Grand Total</p>
-                        </div>
-                        <div class="col-12 col-md-8 text-md-right">
-                            <p class="mb-0">{{ order.grand_total }}</p>
-                        </div>
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Grand Total</p>
                     </div>
-                </div>
-                <div class="row">
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Have a look at more Hampers</span>
-                    </a>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">{{ order.grand_total }}</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    {% endblock %}
+    <div class="row">
+        <div class="col-12 col-lg-7 text-right">
+            <a href="{% url 'products' %}" class="btn btn-black rounded-0 my-2">
+                <span class="text-uppercase">Enjoy a liitle more...</span>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
