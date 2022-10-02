@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Heading -->
+<div class="container">
+    <div class="row">
+        <div class="col text-center mt-5">
+            <h3 class="text-center mb-3 showcase">Wicka Blog</h3>
+            <hr class="w-100 mb-1">
+        </div>
+    </div>
+</div>
+<div class="container-fluid page-wrapper py-3">
+    <!-- Div showing if the user has searched for a blogpost, containing info about the search result and link back to all blog posts-->
+    {% if search_term %} <a class="back-from-search heading" href="{% url 'blog' %}"><span class="icon"><i class="fas fa-arrow-left"></i></span> Back to all blogposts</a> {% else %}
+    {% endif %}
+    <div class="row p-5">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <!-- Search form for searching for blog posts -->
+            <form method="GET" action="{% url 'blog' %}" class="d-flex ms-3 mt-3">
+                <input class="form-control nav-search-input mt-1" type="text" name="query" placeholder="Search our blog" aria-label="Search">
+                <button class="btn blog-search" type="submit" aria-label="Search for blogposts"> <span class="icon nav-icon"><i class="fas fa-search"></i></span></button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center heading">
+            {% if search_term %}
+            <h6>You searched for <strong>'{{ search_term }}'</strong>. {{blogposts|length}} blogpost(s) found:</h6>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<!-- Decorative image showing on xl screens and up -->
+<div class="row align-items-center justify-content-center">
+    <div class="col-8 mt-3">
+        <h4 class="heading my-3 text-center">Farmers Markets, local suppliers, hampers delivered and everything in between...</h4>
+        <!-- Displaying blog posts -->
+        {% for blogpost in blogposts %}
+        <div class=" card-blog my-5 bg-white">
+            <h5>{{ blogpost.title }}</h5>
+            <p>{{ blogpost.content }}</p>
+            <a class="submit-btn rounded-pill" href="{% url 'blog_details' blogpost.id %}">Read and
+                comment</a>
+            {% if request.user.is_superuser %}
+            <div class="my-3">
+                <!-- Functionality of editing and deleting blog posts, only showing if the user is logged in with superuser credentials -->
+                <span class="edit-blogpost-link bg-white text-left"><a class="bg-white" href="{% url 'edit_blogpost' blogpost.id %}">Edit</a></span>
+                <span class="delete-blogpost-link text-right"><a class="bg-white" href="{% url 'confirm_delete_blogpost' blogpost.id %}">Delete</a></span>
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
