@@ -51,9 +51,7 @@ WICKA - Is a luxury hamper delivery company that creatively sources locally sour
 --- 
 #### **Site Owner Goals**
 The website will target users who are use Airbnb and short break style accommodation who want to enhance their stay with a hamper of locally sourced products delivered prior to their arrival. The primary focus is on providing an easy to navigate and responsive e-commerce website that allows users to easily purchase products.  
-- Have the ability to maintain the website and the content on it
-- Edit and delete all blogs and any blog comment and/or rating
-- Add, Edit and Delete any product
+
 #### **User Goals**
 - View and be able to easily purchase products easily and securely.
 - Process payments to pay for products. 
@@ -63,37 +61,44 @@ The website will target users who are use Airbnb and short break style accommoda
 - Add and remove items from the basket with update to the total.
 - View and search blogs, as well as leave comments.
 
-#### **Admin** - As an administrator, I want to be able to:
-- Have full access the admin dashboard as well as all permission granted to the site owner.
-
+#### **Admin Goals** - As an administrator, I want to have the same permissions as as registered users, but also want to:
+- Have full access the admin dashboard to view all users, products and manage other information of the e-commerce store.
+- To be able to post, edit and delete Blogs. 
 
 <a></a>
 ## **Scope**
 ---
 In order to complete the project in time for the deployment and submission deadline, functions of less importance will not be implemented in the first release of project, below are the main features to be impletmented for the project:
 
-- Landing Page displaying navbar with login, basket and menu items.
+- Landing Page displaying navbar with login, basket and menu items, hero image and footer elements contain contact information and social links
 - Products page linkng directly to add to basket button
-- Full CRUD Functionality to Add, Read, Edit and Delete products
-- A page for users to update their profile
-- 
-- 
-- 
+- Basket page showing products to be purchased, with abilty to remove items.
+- Checkout page where the total cost including shipping costs, delivery details, and card payment input using Stripe.
+- User profile page where logged in user can view previous order information and update profile details
+- Blog page featuring search function, and ability to comment for logged in users.
 - Admin priveleges (to manage products and content)
+- Brief page on the Wicka story, vision and ethos.
 
 Features for future releases:
 
 -  Affiliate scheme for hosts through a host_user login, offering discounts for their guests, and earning through their purchases.
 -  Referral scheme where guests can earn credit on their account for reffering new customers.
-- 
-- 
-- 
-- 
+- Location based products.
+- Working with us, Suppliers, FAQ's, Terms and conditions
+- Postcode delivery checker
 
 [Click here](/readme_assets/flow_%20chart.png) to view the Flow Chart
 
 ## **Structure**
 ---
+### **Data Structure**
+A database structure was designed to be specifically suited for Wicka. It was important to make sure the data structure was logical. Each product is identified by a unque sku
+
+Each order has a unique order number which is generated when the order is processed and orders have the users and product details.
+
+Users have the option to purchase products as guest users or as registered users. Guest users can complete the order process but their details will not be saved, they won’t be able to see a Profile with their details, order history and shipping address etc. A Registered user will not only have access to their Profile but will also have their details pre-populated the next time they shop. 
+
+SQLite, which is Django built-in database is used for development mode and Heroku Postgres is used for production mode. AWS (Amazon Web Services) is used to hold all static files and folders for the website for production mode.
 
 ### **Database**
 
