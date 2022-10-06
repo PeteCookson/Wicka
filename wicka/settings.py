@@ -113,10 +113,8 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
-
 WSGI_APPLICATION = 'wicka.wsgi.application'
 
-ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 
 # Database
