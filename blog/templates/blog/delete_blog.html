@@ -18,7 +18,7 @@
             <!-- Form for confirming that the superuser is certain they want to delete the chosen blogpost -->
             <form action="{% url 'delete_blogpost' blogpost.id %}" method="POST" enctype="multipart/form-data" class="site-form">
                 {% csrf_token %}
-                <legend class="mx-auto mb-5 mt-2 delete-confirm-legend heading">Are you sure you want to delete blogpost "{{ blogpost.title }}" ?</legend>
+                <legend class="mx-auto mb-5 mt-2 delete-confirm-legend heading">Are you sure you want to delete the blog "{{ blogpost.title }}" ?</legend>
                 <a href="{% url 'blog' %}" class="btn alt-action-btn mb-5">Cancel</a>
                 <button class="btn action-btn mb-5" type="submit">Delete blogpost </button>
             </form>
