@@ -25,13 +25,28 @@ body {
     justify-content: center;
 }
 
-h3,
+h1 {
+    font-size: 15vw;
+}
+
 h2 {
+    font-size: 2vw;
     font-weight: 300;
 }
 
+h3 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
 .logo {
-    width: 200px;
+    max-width: 20vw;
+    display: block;
+    width: 100%;
 }
 
 .navbar-item,
@@ -73,17 +88,43 @@ a.carousel:hover {
     width: 1.5rem;
 }
 
-.main-logo-link {
-    width: fit-content;
+.shop-now-button {
+    background: #E29578;
+    color: white;
+    min-width: auto;
+    font-family: 'lato';
+    font-weight: 300;
+    text-transform: uppercase;
 }
 
-.shop-now-button {
+.btn-confirm {
     background: #E29578;
     color: white;
     min-width: auto;
     font-family: 'lato';
     font-weight: 400;
     text-transform: uppercase;
+}
+
+.btn-confirm:hover {
+    background: white;
+    color: #E29578;
+    border: 1px solid #E29578;
+}
+
+.btn-decline {
+    background: white;
+    color: #83c5be;
+    min-width: auto;
+    font-family: 'lato';
+    font-weight: 400;
+    text-transform: uppercase;
+    border: 1px solid #83c5be;
+}
+
+.btn-decline:hover {
+    background: #83c5be;
+    color: white;
 }
 
 .btn-black {

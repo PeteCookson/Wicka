@@ -14,7 +14,7 @@
 <div class="container-fluid page-wrapper py-3">
     <!-- Div showing if the user has searched for a blogpost, containing info about the search result and link back to all blog posts-->
     {% if search_term %}
-    <a class="" href="{% url 'blog' %}"><span class="icon"><i class="fas fa-chevron-left"></i></span> Back to all Blogs</a>
+    <a class="btn-decline" href="{% url 'blog' %}"><span class="icon"><i class="fas fa-chevron-left"></i></span> Back to all Blogs</a>
     {% else %}
     {% endif %}
     <div class="row p-5">
@@ -46,7 +46,7 @@
                 <h4 class="card-title">{{ blogpost.title }}</h4>
                 <p class="card-subtitle text-muted">{{ blogpost.posted_date }}</p>
                 <p class="card-text">{{ blogpost.content|slice:":200" }}</p>
-                <a class="submit-btn rounded-pill" href="{% url 'blog_details' blogpost.id %}">Read and
+                <a class="btn btn-confirm" href="{% url 'blog_details' blogpost.id %}">Read and
                     comment</a>
                 {% if request.user.is_superuser %}
                 <div class="my-3">

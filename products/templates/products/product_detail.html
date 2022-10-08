@@ -45,13 +45,13 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-lg mt-5">
+                            <a href="{% url 'products' %}" class="btn btn-decline rounded-lg mt-5">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
-                                <span class="navbar-item">Keep Shopping</span>
+                                <span class="">Keep Shopping</span>
                             </a>
-                            <input type="submit" class="btn shop-now-button mt-5" value="Add to Bag">
+                            <input type="submit" class="btn btn-confirm mt-5" value="Add to Bag">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
