@@ -41,18 +41,22 @@
         <h4 class="heading my-3 text-center">Farmers Markets, local suppliers, hampers and everything in between...</h4>
         <!-- Displaying blog posts -->
         {% for blogpost in blogposts %}
-        <div class=" card-blog my-5 bg-white">
-            <h5>{{ blogpost.title }}</h5>
-            <p>{{ blogpost.content }}</p>
-            <a class="submit-btn rounded-pill" href="{% url 'blog_details' blogpost.id %}">Read and
-                comment</a>
-            {% if request.user.is_superuser %}
-            <div class="my-3">
-                <!-- Functionality of editing and deleting blog posts, only showing if the user is logged in with superuser credentials -->
-                <span class="edit-blogpost-link bg-white text-left"><a class="bg-white" href="{% url 'edit_blogpost' blogpost.id %}">Edit</a></span>
-                <span class="delete-blogpost-link text-right"><a class="bg-white" href="{% url 'confirm_delete_blogpost' blogpost.id %}">Delete</a></span>
+        <div class="card my-5">
+            <div class="card-body">
+                <h4 class="card-title">{{ blogpost.title }}</h4>
+                <p class="card-subtitle text-muted">{{ blogpost.posted_date }}</p>
+                <p class="card-text">{{ blogpost.content|slice:":200" }}</p>
+                <a class="submit-btn rounded-pill" href="{% url 'blog_details' blogpost.id %}">Read and
+                    comment</a>
+                {% if request.user.is_superuser %}
+                <div class="my-3">
+                    <!-- Functionality of editing and deleting blog posts, only showing if the user is logged in with superuser credentials -->
+                    <span class="edit-blogpost-link bg-white text-left"><a class="bg-white" href="{% url 'add_blogpost' %}">Add</a></span>
+                    <span class="edit-blogpost-link bg-white text-left"><a class="bg-white" href="{% url 'edit_blogpost' blogpost.id %}">Edit</a></span>
+                    <span class="delete-blogpost-link text-right"><a class="bg-white" href="{% url 'confirm_delete_blogpost' blogpost.id %}">Delete</a></span>
+                </div>
+                {% endif %}
             </div>
-            {% endif %}
         </div>
         {% endfor %}
     </div>

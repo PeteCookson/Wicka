@@ -420,6 +420,8 @@ Create an account with [AWS](www.aws.amazon.com), follow the steps and sign in.
     - Success message in DeleteView: https://bit.ly/3oRYlzG
 - Page scroll up javascript feature: Orginal code from with modifications for the project from https://stackoverflow.com/questions/14249998/jquery-back-to-top and https://www.tutorialrepublic.com/faq/how-to-scroll-to-the-top-of-the-page-using-jquery.php 
 - Scroll up button and icon Styling: Orginal code from with modifications for the project from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+- Building A Blog Application With Django from https://djangocentral.com/building-a-blog-application-with-django/
+- Adding Comments Model To The Administration Site from https://djangocentral.com/creating-comments-system-with-django/
 - Send email functionality:
     - https://docs.djangoproject.com/en/3.2/topics/email/
     - https://docs.djangoproject.com/en/3.2/topics/forms/
