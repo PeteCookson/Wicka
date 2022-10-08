@@ -17,9 +17,15 @@
             </div>
             <div class="carousel-item text-center p-2" data-interval="4000">
                 <div class="user_text">
+                    {% if request.user.is_authenticated %}
+                    <h6>
+                        <a class="carousel" href="{% url 'products' %}" id="sign_up">Shop now and save</a>
+                    </h6>
+                    {% else %}
                     <h6>
                         <a class="carousel" href="{% url 'account_signup' %}" id="sign_up">Sign up to Wicka and save</a>
                     </h6>
+                    {% endif %}
                 </div>
             </div>
         </div>
