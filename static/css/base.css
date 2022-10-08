@@ -44,7 +44,7 @@ h4 {
 }
 
 .logo {
-    max-width: 20vw;
+    max-width: 15vw;
     display: block;
     width: 100%;
 }
@@ -138,6 +138,34 @@ a.carousel:hover {
     border: 1px solid black;
 }
 
+.btn-super-link {
+    background: black;
+    color: white;
+    min-width: auto;
+    font-family: 'lato';
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.btn-super-link:hover {
+    background: #006d77;
+    color: white;
+}
+
+.btn-super-link-delete {
+    background: black;
+    color: white;
+    min-width: auto;
+    font-family: 'lato';
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.btn-super-link-delete:hover {
+    background: red;
+    color: black;
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
@@ -158,6 +186,20 @@ a.carousel:hover {
 
 .remove-item {
     cursor: pointer;
+}
+
+.product-name {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.card {
+    border-radius: 5px;
+    margin: 30px;
+    padding: 0;
+    box-shadow: 2px 2px 5px;
+
 }
 
 /* -------------------------------- Index */

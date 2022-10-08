@@ -2,66 +2,56 @@
 {% load static %}
 
 {% block content %}
-<div class="container">
+<div class="container-fluid">
     <div class="row">
+        <div class="col best-sellers pt-5">
+            <h2 class="text-center product-name">Hampers</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <div class="row pt-3">
         {% for product in products %}
-        <div class="col-sm-8 col-md-8 col-lg-3 d-flex m-2 card">
-            <div>
+        <!-- product cards -->
+        <div class="col-sm-9 col-md-6 col-lg-4">
+            <div class="card d-flex align-items-center justify-content-around">
+                <!-- Product image -->
                 {% if product.image %}
-                <a href="{% url 'product_detail' product.id %}">
-                    <img class="card-img-top py-3 img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                <a href="#">
+                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                 </a>
                 {% else %}
-                <a href="{% url 'product_detail' product.id %}">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                <a href="#">
+                    <img class="card-img-top img-fluid" src="" alt="{{ product.name }}">
                 </a>
                 {% endif %}
-                <a role="button" data-toggle="collapse" href="#coll_{{ product.id }}" role="button" aria-expanded="false" aria-controls="coll_{{ product.id }}">
-                    <h3 class="text-center product-name">{{ product.name }}</h3>
-                </a>
-            </div>
-        </div>
-
-        <div class="collapse" id="coll_{{ product.id }}">
-            <div class="row">
-
-                <div class="col">
-                    {% if product.image %}
-                    <a>
-                        <img class="card-img-top py-3 img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                    </a>
-                    {% else %}
-                    <a href="">
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                    </a>
-                    {% endif %}
-                </div>
-                <div class="col">
-                    <div>
-                        <h4 class="">{{ product.name }}</h4>
+                <div class="card-body">
+                    <!-- product name -->
+                    <div class="product-name text-center">
+                        <h3 class="">{{ product.name }}</h3>
                     </div>
-                    <div class="">
-                        <p class="">£{{ product.price }}</p>
+                    <div class="row py-2 text-secondary">
+                        <div class="col">
+                            <!-- product price -->
+                            <p class="lead mb-0 text-center font-weight-bold">£{{ product.price }}</p>
+                            {% if product.rating %}
+                            <p class="mb-0 text-center text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</p>
+                            {% else %}
+                            <p class="mb-0 text-center text-muted">No Rating</p>
+                            {% endif %}
+                            <!-- <p class="lead mb-0 text-center font-weight-bold">{{ product.rating }} out of 5</p> -->
+                        </div>
                     </div>
-                    <div class="">
-                        <p class="">{{ product.description }}</p>
-                    </div>
-                    <div class="my-5">
-                        <h4>
-                            <a href="" class="btn-confirm btn btn-lg rounded-lg py-3">add to basket</a>
-                        </h4>
-                    </div>
+                    <a href="{% url 'product_detail' product.id %}" class="btn btn-small btn-confirm">View Details</a>
                     {% if request.user.is_superuser %}
                     <small class="ml-3">
-                        <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                        <a class="btn btn-super-link" href="{% url 'edit_product' product.id %}">Edit</a>
+                        <a class="btn btn-super-link-delete" href="{% url 'delete_product' product.id %}">Delete</a>
                     </small>
                     {% endif %}
                 </div>
             </div>
         </div>
         {% endfor %}
-
     </div>
 </div>
 {% endblock %}

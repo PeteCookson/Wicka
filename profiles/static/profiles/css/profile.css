@@ -5,11 +5,11 @@
 }
 
 #profile-update-form .form-control {
-    color: #d38818;
+    color: black;
 }
 
 #profile-update-form input::placeholder {
-    color: #a7a095;
+    color: #777777;
 }
 
 #id_default_country,

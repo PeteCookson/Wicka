@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="col text-center mt-5">
-            <h3 class="text-center mb-3 showcase">Add a Blog</h3>
+            <h3 class="text-center my-4 product-name">Add a Blog</h3>
             <hr class="w-100 mb-1">
         </div>
     </div>
@@ -24,8 +24,8 @@
                 {{ field }}
                 {% endif %}
                 {% endfor %}
-                <a class="btn alt-action-btn mb-5" href="{% url 'blog' %}">Cancel</a>
-                <button class="btn action-btn mb-5" type="submit">Add a Blog </button>
+                <a class="btn btn-decline mb-5" href="{% url 'blog' %}">Cancel</a>
+                <button class="btn btn-confirm mb-5" type="submit">Add Blog </button>
             </form>
         </div>
     </div>

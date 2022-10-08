@@ -28,8 +28,16 @@
                 <form method="POST" class="mx-auto mw-100">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <input type="submit" class="btn action-btn mb-5" value="Add comment">
+                    <input type="submit" class="btn btn-confirm mb-5" value="Add comment">
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    {% if request.user.is_superuser %}
+                    <div class="my-3">
+                        <!-- Functionality of editing and deleting blog posts, only showing if the user is logged in with superuser credentials -->
+                        <span><a class="btn btn-sml btn-super-link" href="{% url 'add_blogpost' %}">Add</a></span>
+                        <span><a class="btn btn-sml btn-super-link" href="{% url 'edit_blogpost' blogpost.id %}">Edit</a></span>
+                        <span><a class="btn btn-sml btn-super-link-delete" href="{% url 'confirm_delete_blogpost' blogpost.id %}">Delete</a></span>
+                    </div>
+                    {% endif %}
                     <p>* = required field</p>
                 </form>
                 {% else %}
