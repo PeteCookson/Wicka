@@ -92,12 +92,9 @@ Features for future releases:
 ## **Structure**
 ---
 ### **Data Structure**
-A database structure was designed to be specifically suited for Wicka. It was important to make sure the data structure was logical. Each product is identified by a unque sku
-
+A database structure was designed to be specifically suited for Wicka. It was important to make sure the data structure was logical. Each product is identified by a unque sku.
 Each order has a unique order number which is generated when the order is processed and orders have the users and product details.
-
 Users have the option to purchase products as guest users or as registered users. Guest users can complete the order process but their details will not be saved, they won’t be able to see a Profile with their details, order history and shipping address etc. A Registered user will not only have access to their Profile but will also have their details pre-populated the next time they shop. 
-
 SQLite, which is Django built-in database is used for development mode and Heroku Postgres is used for production mode. AWS (Amazon Web Services) is used to hold all static files and folders for the website for production mode.
 
 ## **Skeleton**
@@ -412,7 +409,6 @@ Product images and descriptions is from the following source:
 Blogs are taken from 
 - [Slate](https://helloslate.co.uk/now-more-than-ever-its-so-important-to-support-your-small-local-suppliers/)
 - [lfm.org.uk](https://www.lfm.org.uk/farmers-blog/7-questions-parsons-nose/)
-  
 
 ### **Media**
 - Products photos from the following sources:
