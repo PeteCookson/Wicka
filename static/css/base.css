@@ -12,7 +12,7 @@ body {
 
 .hero {
     height: 100vh;
-    background: url('/media/homepage-background-cropped.webp') top center no-repeat;
+    background: url('{{ MEDIA_URL }}homepage-background-cropped.webp') top center no-repeat;
     background-size: cover;
     display: -webkit-box;
     display: -ms-flexbox;
