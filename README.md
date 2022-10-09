@@ -6,9 +6,9 @@ The objective for this milestone project is to plan, design and develop a projec
 
 WICKA - Is a luxury hamper delivery company that creatively sources locally sourced products, carefully packages them to be delivered to the Airbnb, ready for the guests arrival.
 
-("Responsive Mockup")
+![alt text](/readme_assets/responsive.png "Responsive Mockup")
 
-**View live version of [website](https:/wicka.herokuapp.com/)**
+**View live version of [website](https://wicka-hampers.herokuapp.com/)**
 
 <br>
 <hr>
@@ -86,22 +86,13 @@ Features for future releases:
 - Location based products.
 - Working with us, Suppliers, FAQ's, Terms and conditions
 - Postcode delivery checker
-
-[Click here](/readme_assets/flow_%20chart.png) to view the Flow Chart
+- Update to the Blog to include images and document structure
+- About page to reflect the quality of product
 
 ## **Structure**
 ---
 ### **Data Structure**
 A database structure was designed to be specifically suited for Wicka. It was important to make sure the data structure was logical. Each product is identified by a unque sku
-
-Each order has a unique order number which is generated when the order is processed and orders have the users and product details.
-
-Users have the option to purchase products as guest users or as registered users. Guest users can complete the order process but their details will not be saved, they won’t be able to see a Profile with their details, order history and shipping address etc. A Registered user will not only have access to their Profile but will also have their details pre-populated the next time they shop. 
-
-SQLite, which is Django built-in database is used for development mode and Heroku Postgres is used for production mode. AWS (Amazon Web Services) is used to hold all static files and folders for the website for production mode.
-
-### **Database**
-A database structure was designed to be specifically suited for Saran Collection. It was important to make sure the data structure was logical. Each product is linked to a category and these are identified by id (pk number). 
 
 Each order has a unique order number which is generated when the order is processed and orders have the users and product details.
 
@@ -146,15 +137,34 @@ The website uses the [Google Fonts](https://fonts.google.com/) library to provid
 <details>
 <summary>Typography</summary>
 
-![Typography](/readme_assets/)
+![Lato](/readme_assets/lato-light.png)
+![Merriweather](/readme_assets/merriweather-regular.png)
+![Raleway](/readme_assets/raleway.png)
 
 </details>
 <br>
 
 ## **Existing Features**
 ---
+- Landing Page displaying navbar with login, basket and menu items, hero image and footer elements contain contact information and social links
+- Products page linkng directly to add to basket button
+- Basket page showing products to be purchased, with abilty to remove items.
+- Checkout page where the total cost including shipping costs, delivery details, and card payment input using Stripe.
+- User profile page where logged in user can view previous order information and update profile details
+- Blog page featuring search function, and ability to comment for logged in users.
+- Admin priveleges (to manage products and content)
+- Brief page on the Wicka story, vision and ethos.
 ## **Future Features**
 ---
+Features for future releases:
+
+-  Affiliate scheme for hosts through a host_user login, offering discounts for their guests, and earning through their purchases.
+-  Referral scheme where guests can earn credit on their account for reffering new customers.
+- Location based products.
+- Working with us, Suppliers, FAQ's, Terms and conditions
+- Postcode delivery checker
+- Update to the Blog to include images and document structure
+- About page to reflect the quality of product
 ## **Technologies Used** 
 ---
 ### Languages
@@ -188,19 +198,16 @@ The primary languages used throughout the development of this project are:
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) for testing CSS code
 - [JSHint Validator](https://jshint.com/) for detecting errors and potential problems in your JavaScript code
 - [Link Checker](https://validator.w3.org/checklink) for checking all links on the website and see if all links work
+
 - Lighthouse in Google dev tool for testing the performance of the website
-- [PEP8 Online](http://pep8online.com/) for checking Python code syntax
-- [Grammerly](https://www.grammarly.com/) to check spelling & grammer
-- [Notion](https://www.notion.so) for project planning and tracking
-- [Datagrip](https://www.jetbrains.com/datagrip/?source=google&medium=cpc&campaign=15034927837&term=datagrip&gclid=Cj0KCQjw6_CYBhDjARIsABnuSzp0LpwQpmCHmvcBxdM9YTyefXuJn_rgE3zlOPdBMWTi9vvJv_mzOHIaAiUeEALw_wcB) to print out the data strucutre 
+
 ### Design
 - [Adobe XD](https://adobexd.com/) used for wireframe and mockups
-- Illustrator
-- Photoshop
-- Principle
+- [Illustrator](https://www.adobe.com/uk/products/illustrator) used to design the logo
+- [Principle](https://principleformac.com/) used to create the loading gif
 
 ### Other Technologies
-- Squoosh
+- [Squoosh](https://squoosh.app/) used for image formatting and resizing.
 
 ## **Bugs and Testing**
 Bugs & Testing information can be found in the seperate [bugs & testing](/TESTING.md) file.
@@ -398,28 +405,20 @@ Create an account with [AWS](www.aws.amazon.com), follow the steps and sign in.
 - On Stripe, add a new webhook endpoint, with the URL of your Heroku app, followed by 
 ```/checkout/wh/```. Select 'receive all events' and click 'add endpoint'.
 ## **Credits**
+Product images and descriptions is from the following source:
+- https://www.fortnumandmason.com/
 
 ### **Content**
-- The copy and text for this website was created by 
-- Blogs are taken from [Brandpoint](https://www.brandpointcontent.com/)
-- Product descriptions from the following sources:
+Blogs are taken from 
+- [Slate](https://helloslate.co.uk/now-more-than-ever-its-so-important-to-support-your-small-local-suppliers/)
+- [lfm.org.uk](https://www.lfm.org.uk/farmers-blog/7-questions-parsons-nose/)
   
 
 ### **Media**
-- Logo Illustration is commissioned. 
 - Products photos from the following sources:
-    
-    - Home page images from [Pexels](https://www.pexels.com//)
+    - Home / About images from [Pexels](https://www.pexels.com//)
 
 ### **Code**
-- Checkout progress: Original code with modifications from: https://bbbootstrap.com/snippets/bootstrap-4-ecommerce-checkout-form-progress-bar-44177913
-- Exclude creator field from form https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-editing/#models-and-request-user
-- For presenting extra content via context: https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-display/
-- Products app:
-    - User permissions: https://bit.ly/3mSsegO
-    - Success message in DeleteView: https://bit.ly/3oRYlzG
-- Page scroll up javascript feature: Orginal code from with modifications for the project from https://stackoverflow.com/questions/14249998/jquery-back-to-top and https://www.tutorialrepublic.com/faq/how-to-scroll-to-the-top-of-the-page-using-jquery.php 
-- Scroll up button and icon Styling: Orginal code from with modifications for the project from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
 - Building A Blog Application With Django from https://djangocentral.com/building-a-blog-application-with-django/
 - Adding Comments Model To The Administration Site from https://djangocentral.com/creating-comments-system-with-django/
 - Send email functionality:
@@ -428,8 +427,9 @@ Create an account with [AWS](www.aws.amazon.com), follow the steps and sign in.
     - https://www.youtube.com/watch?v=w4ilq6Zk-08&list=PLXcnmXd-db_hO1v3SLAzVcNieoS_Tcn-6&index=6
 
 ### **Acknowledgements**
-- Thanks to my mentor for guiding me throughout this project.
-- Code Institute Tutors for giving me a guidance on how to solve issues.
-- Slack
+- The Code Institute Slack community, has once again throughout this project, been a valuable resource.
+- Stack Overflow is another constant source of helpful guidance and answers to so many questions.
+- My mentor, Spencer Barriball, has been supportive and encouraging throughout this project.
+- The Tutor Support on Code Institute has also been valuable resourse for this project.
 
 #### Back to [top](#table-of-contents)

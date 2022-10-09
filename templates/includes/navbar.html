@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a href="{% url 'home' %}" class="navbar-brand img-responsive nav-link logo">
-            <img src="{{ MEDIA_URL }}wicka_logo.webp" width="40px" alt="Logo for Wicka" class="logo">
+            <img src="{{ MEDIA_URL }}wicka_logo.webp" alt="Logo for Wicka" class="logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -11,14 +11,17 @@
                 <li class="list-inline-item">
                     <a class="navbar-item active" href="{% url 'products' %}" id="hampers" aria-haspopup="true" aria-expanded="false">
                         <div class="mx-3">Hampers</div>
+                    </a>
                 </li>
                 <li class="list-inline-item">
                     <a class="navbar-item" href="{% url 'about' %}" id="about" aria-haspopup="true" aria-expanded="false">
                         <div class="mx-3">About</div>
+                    </a>
                 </li>
                 <li class="list-inline-item">
                     <a class="navbar-item" href="{% url 'blog' %}" id="blog" aria-haspopup="true" aria-expanded="false">
                         <div class="mx-3">Blog</div>
+                    </a>
                 </li>
             </ul>
 

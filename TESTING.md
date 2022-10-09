@@ -1,21 +1,25 @@
 Back to [README](README.md)
 
 ## Index
-- [Strategy](#strategy)
-* [Site Owner Goals](#site-owner-goals)
-* [External User Goals](#external-user-goals)
-* [Returning User Goals](#returning-user-goals)
 - [Bugs & Testing resolved](#bugs-&-testing)
 - [Bugs & Testing unresolved](#bugs-&-testing)
 
-## Automated testing
 
+
+## Automated testing
 - [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
+
 - [W3C - HTML](https://validator.w3.org/) 
+
 - [W3C - CSS](https://jigsaw.w3.org/css-validator/)
+![CSS](/readme_assets/css-validation.png)
 
 ## Manual testing
+The following tests have been carried out without issue:
 
+**Navigation**
+
+**Home page**
 
 ### Browsers
 
