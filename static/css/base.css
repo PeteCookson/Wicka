@@ -127,6 +127,10 @@ a.carousel:hover {
     color: white;
 }
 
+.toast-delivery {
+    background: #83c5be;
+}
+
 .btn-black {
     background: black;
     color: white;
