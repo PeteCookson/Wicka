@@ -43,8 +43,8 @@
                 {% else %}
                 <!-- Links to login and signup pages, shown if user is not logged in -->
                 <p>You have to be signed in to leave comments</p>
-                <p> <a class="link-text" href="{% url 'account_login' %}">Sign In here</a> <br>
-                    <a class="link-text" href="{% url 'account_signup' %}">Register for an account here</a>
+                <p> <a class="btn btn-confirm" href="{% url 'account_login' %}">Log in</a> <br>
+                    <a class="btn btn-confirm" href="{% url 'account_signup' %}">Register</a>
                 </p>
                 {% endif %}
             </div>
