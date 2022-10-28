@@ -51,7 +51,6 @@ INSTALLED_APPS = [
     'profiles',
     'blog',
     'about',
-    'django_extensions',
 
     # Other
     'crispy_forms',
@@ -157,19 +156,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-GRAPH_MODELS = {
-  'all_applications': True,
-  'group_models': True,
-  "app_labels": [
-        "about",
-        "basket",
-        "blog",
-        "checkout",
-        "home",
-        "products",
-        "profiles",
-    ],
-}
 
 
 # Internationalization
