@@ -476,7 +476,7 @@ The primary languages used throughout the development of this project are:
 Bugs & Testing information can be found in the seperate [bugs & testing](/TESTING.md) file.
 
 ## **Deployment**
-This project uses GitHub for version control, GitPod as the cloud-based IDE and Heroku to deploy the site into production. Heroku Postgres is used for the database. [AWS services](https://aws.amazon.com/), which is also a cloud-based platform, is used to store static files and images as Heroku has [no files system to store new files]().
+This project uses GitHub for version control, GitPod as the cloud-based IDE and Heroku to deploy the site into production. Heroku Postgres is used for the database. [AWS services](https://aws.amazon.com/), which is also a cloud-based platform, is used to store static files and images as Heroku has no files system to store new files.
 
 The below steps are specific to Gitpod therefore depending on your IDE, you might need to adjust the below steps. 
 
@@ -684,10 +684,10 @@ Blogs are taken from
 - Data structure and graphic diagram from http://www.graphviz.org
 - Building A Blog Application With Django from https://djangocentral.com/building-a-blog-application-with-django/
 - Adding Comments Model To The Administration Site from https://djangocentral.com/creating-comments-system-with-django/
-- Send email functionality:
+<!-- - Send email functionality: 
     - https://docs.djangoproject.com/en/3.2/topics/email/
     - https://docs.djangoproject.com/en/3.2/topics/forms/
-    - https://www.youtube.com/watch?v=w4ilq6Zk-08&list=PLXcnmXd-db_hO1v3SLAzVcNieoS_Tcn-6&index=6
+    - https://www.youtube.com/watch?v=w4ilq6Zk-08&list=PLXcnmXd-db_hO1v3SLAzVcNieoS_Tcn-6&index=6-->
 
 ### **Acknowledgements**
 - The Code Institute Slack community, has once again throughout this project, been a valuable resource.
