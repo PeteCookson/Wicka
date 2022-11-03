@@ -5,7 +5,7 @@ The objective for this milestone project is to plan, design and develop a projec
 
 WICKA - Is a luxury hamper delivery company that creatively sources locally sourced products, carefully packages them to be delivered to the Airbnb, ready for the guests arrival.
 
-![Responsive Mockup](/readme_assets/responsive.png)
+![Responsive Mockup](/readme_assets/images/responsive.png)
 
 **View the live [website](https://wicka-hampers.herokuapp.com/)**
 
@@ -119,6 +119,8 @@ SQLite, which is Django built-in database is used for development mode and Herok
 ---
 ### **Wireframes**
 
+<br>
+
 #### **Low Fidelity**
 [Adobe XD](https://adobexd.com/) was used to create the low fidelity wireframes. These simple layouts were used to make the design process and decisions simple and consistant, help to outline the blueprint for web and communicate the projects ideas.
 
@@ -211,6 +213,8 @@ SQLite, which is Django built-in database is used for development mode and Herok
 
 ![Wireframe: Blog](/readme-assets/wireframes/wireframe_comment.png)
 </details>
+
+<br>
 
 #### **High Fidelity**
 [Adobe XD](https://adobexd.com/) was used to create a high-fidelity mock-up, the designs were used to make the coding process easier, havng made all the important decisions about layout, fonts, colours,buttons and styling. 
@@ -677,6 +681,7 @@ Blogs are taken from
     - Home / About images from [Pexels](https://www.pexels.com//)
 
 ### **Code**
+- Data structure and graphic diagram from http://www.graphviz.org
 - Building A Blog Application With Django from https://djangocentral.com/building-a-blog-application-with-django/
 - Adding Comments Model To The Administration Site from https://djangocentral.com/creating-comments-system-with-django/
 - Send email functionality:
