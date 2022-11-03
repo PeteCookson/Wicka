@@ -281,11 +281,11 @@ ___
 
 <br>
     
-### [Python: PEP8 Online](http://pep8online.com/)
+<!-- ### [Python: PEP8 Online](http://pep8online.com/)
 
 - To validate the Python code of the project to check if it is PEP8 compliant. It was done by pasting code on the site by the direct input method.
 
-<br>
+<br> -->
 
 ### Lighthouse (Google dev tool)
 - To test the accessibility and performance of the website. 

@@ -21,7 +21,7 @@ WICKA - Is a luxury hamper delivery company that creatively sources locally sour
         * [Admin Goals](#admin-goals)
     * [Scope](#scope)
     * [Structure](#structure)
-        * [Database](#database)
+        * [Data Schema](#data-schema)
     * [Skeleton](#skeleton)
         * [Wireframes](#wireframes)
     * [Surface](#surface)
@@ -101,17 +101,17 @@ Features for future releases:
 
 ## **Structure**
 ---
-### **Data Structure**
+### **Data Schema**
 A database structure was designed to be specifically suited for Wicka. It was important to make sure the data structure was logical. Each product is identified by a unque sku.
 Each order has a unique order number which is generated when the order is processed and orders have the users and product details.
 Users have the option to purchase products as guest users or as registered users. Guest users can complete the order process but their details will not be saved, they won’t be able to see a profile with their details, order history and shipping details. A Registered user will not only have access to their profile but will also have their details pre-populated the next time they shop. 
 SQLite, which is Django built-in database is used for development mode and Heroku Postgres is used for production mode. AWS (Amazon Web Services) is used to hold all static files and folders for the website for production mode.
 
 <details>
-<summary>Data Structure</summary
+<summary>Data Schema</summary
 
 
-![Data Structure](/readme_assets/images/data_structure.png)
+![Data Schema](/readme_assets/images/data_structure.png)
 </details>
 <br>
 
