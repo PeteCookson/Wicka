@@ -14,7 +14,7 @@ body {
     height: 100vh;
     background: url('/media/homepage-background-cropped.webp') top center no-repeat;
     background-size: cover;
-    display: -webkit-box;
+    /* display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
@@ -22,7 +22,7 @@ body {
     align-items: flex-end;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
+    justify-content: center; */
 }
 
 h1 {
