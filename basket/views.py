@@ -35,10 +35,10 @@ def remove_from_basket(request, item_id):
         product = get_object_or_404(Product, pk=item_id)
         basket = request.session.get('basket', {})
 
-        """if item_id in list(basket.keys()):
-            basket[item_id] += quantity
-        else:
-            basket[item_id] = quantity"""
+        # if item_id in list(basket.keys()):
+        #     basket[item_id] += quantity
+        # else:
+        #     basket[item_id] = quantity
         basket.pop(item_id)
         messages.success(request, f'Removed {product.name} from your basket')
 
