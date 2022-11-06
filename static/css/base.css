@@ -104,7 +104,16 @@ a.carousel:hover {
 
 .btn-confirm {
     background: #E29578;
-    color: white;
+    color: white !important;
+    min-width: auto;
+    font-family: 'lato';
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.primaryAction {
+    background: #E29578;
+    color: white !important;
     min-width: auto;
     font-family: 'lato';
     font-weight: 400;
@@ -113,7 +122,7 @@ a.carousel:hover {
 
 .btn-confirm:hover {
     background: white;
-    color: #E29578;
+    color: #E29578 !important;
     border: 1px solid #E29578;
 }
 

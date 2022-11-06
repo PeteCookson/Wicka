@@ -33,9 +33,6 @@ def blog(request):
     return render(request, 'blog/blog.html', context)
 
 
-# Credit for code for retrieving and adding blog comments:
-# https://djangocentral.com/creating-comments-system-with-django/'
-
 def blog_details(request, blogpost_id):
     """
     A view to show blogpost details with content text, and add comments to them
@@ -85,8 +82,8 @@ def add_blogpost(request):
             request, 'This functionality is only available to store owners')
         return redirect(reverse('home'))
 
-    # Handling functionality of add a blogpost to the db, or returning an
-    # error message if add blogpost did not succeed
+    # Handling functionality of add a blog to the db, or returning an
+    # error message if add blog did not succeed
     if request.method == 'POST':
         form = BlogpostForm(request.POST)
         if form.is_valid():
@@ -123,8 +120,8 @@ def edit_blogpost(request, blogpost_id):
 
     blogpost = get_object_or_404(BlogPost, pk=blogpost_id)
 
-    # Handling functionality of edit a blogpost to the db, or returning an
-    # error message if edit blogpost did not succeed
+    # Handling functionality of edit a blog to the db, or returning an
+    # error message if edit blog did not succeed
     if request.method == 'POST':
         form = BlogpostForm(request.POST, request.FILES, instance=blogpost)
         if form.is_valid():
@@ -136,7 +133,7 @@ def edit_blogpost(request, blogpost_id):
                 request, 'Sorry, something went wrong. \
                     The blogpost was not updated.')
 
-    # Rendering an edit form for the specific blogpost and message
+    # Rendering an edit form for the specific blog and message
     # to the user about which blogpost they are editing
     else:
         form = BlogpostForm(instance=blogpost)
@@ -163,7 +160,7 @@ def confirm_delete_blogpost(request, blogpost_id):
             request, 'This functionality is only available to store owners')
         return redirect(reverse('home'))
 
-    # Getting the specific blogpost from the db
+    # Getting the specific blog from the db
     blogpost = get_object_or_404(BlogPost, pk=blogpost_id)
     context = {
         'blogpost': blogpost,
@@ -186,7 +183,7 @@ def delete_blogpost(request, blogpost_id):
             request, 'This functionality is only available to store owners')
         return redirect(reverse('home'))
 
-    # Getting the specific blogpost and deleting it from the db
+    # Getting the specific blog and deleting it from the db
     blogpost = get_object_or_404(BlogPost, pk=blogpost_id)
     blogpost.delete()
     messages.success(request, 'Blogpost successfully deleted.')
