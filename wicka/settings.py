@@ -32,6 +32,8 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['wicka-hampers.herokuapp.com', 'localhost']
 
+CSRF_TRUSTED_ORIGINS = ['https://wicka-hampers.herokuapp.com', 'https://8000-petecookson-wicka-r457agpep62.ws-eu74.gitpod.io']
+
 
 # Application definition
 
