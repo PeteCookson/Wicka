@@ -1,41 +1,40 @@
-<nav class="navbar navbar-light bg-light d-flex">
-    <div class="row align-items-center">
-        <div class="col-4">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <div class="navbar col-sm-3 col-md-2">
             <a href="{% url 'home' %}" class="navbar-brand nav-link logo">
                 <img src="{{ MEDIA_URL }}wicka_logo.webp" alt="Logo for Wicka" class="logo">
             </a>
         </div>
-        <div class="col navbar-expand-sm navbar-light bg-light align-items-center my-auto">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse list-inline-item" id="main-nav">
-                <ul class="list-inline list-unstyled text-center justify-content-center">
-                    <li class="list-inline-item">
-                        <a class="navbar-item active" href="{% url 'products' %}" id="hampers" aria-haspopup="true" aria-expanded="false">
-                            <div class="mx-3">Hampers</div>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="navbar-item" href="{% url 'about' %}" id="about" aria-haspopup="true" aria-expanded="false">
-                            <div class="mx-3">About</div>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="navbar-item" href="{% url 'blog' %}" id="blog" aria-haspopup="true" aria-expanded="false">
-                            <div class="mx-3">Blog</div>
-                        </a>
-                    </li>
-                </ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse col my-auto ml-auto justify-content-end" id="main-nav">
+            <ul class="list-inline list-unstyled text-center text-lg-right">
+                <li class="list-inline-item">
+                    <a class="navbar-item active" href="{% url 'products' %}" id="hampers" aria-haspopup="true" aria-expanded="false">
+                        <div class="mx-3">Hampers</div>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="navbar-item" href="{% url 'about' %}" id="about" aria-haspopup="true" aria-expanded="false">
+                        <div class="mx-3">About</div>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="navbar-item" href="{% url 'blog' %}" id="blog" aria-haspopup="true" aria-expanded="false">
+                        <div class="mx-3">Blog</div>
+                    </a>
+                </li>
+            </ul>
 
-            </div>
         </div>
-        <div class="col class align-items-center inline-style">
-            <ul class="list-unstyled">
+        <div class="row">
+
+            <ul class="list-inline list-unstyled col-sm-6">
                 <li class="dropdown">
                     <a class="navbar-item nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="text-center">
-                            <i class="fas fa-user fa-lg mx-3"></i>
+                            <div><i class="fas fa-user fa-lg mx-3"></i></div>
                         </div>
                     </a>
                     <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -54,9 +53,9 @@
                 </li>
             </ul>
 
-            <a class="{% if grand_total %}text-info {% else %}navbar-item{% endif %} nav-link" href="{% url 'view_basket' %}">
+            <a class="{% if grand_total %}text-info {% else %}navbar-item{% endif %} nav-link col-sm-6" href="{% url 'view_basket' %}">
                 <div class="text-center">
-                    <i class="fas fa-shopping-bag fa-lg mx-3"></i>
+                    <div><i class="fas fa-shopping-bag fa-lg mx-3"></i></div>
                     <p class="my-0">
                         {% if grand_total %}
                         £{{ grand_total|floatformat:2 }}
