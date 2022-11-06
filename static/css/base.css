@@ -1,27 +1,15 @@
-/* set height */
+/* -------------------------------------- set height */
 html {
     height: 100%;
 }
 
 body {
-    /* from B.A */
     height: auto;
     color: #555;
     font-family: 'Merriweather', sans-serif;
 }
 
-.hero-image {
-    max-width: 100%;
-    height: 50vh;
-    background-image: url('/media/homepage-background-cropped.webp');
-    background-repeat: no-repeat;
-    background-position: 54% 46%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
+/* -------------------------------------- fonts */
 h1 {
     font-size: 15vw;
 }
@@ -45,6 +33,20 @@ h4 {
     height: auto;
 }
 
+/* -------------------------------------- hero */
+.hero-image {
+    max-width: 100%;
+    height: 50vh;
+    background-image: url('/media/homepage-background-cropped.webp');
+    background-repeat: no-repeat;
+    background-position: 54% 46%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* -------------------------------------- Navbar */
 .navbar {
     display: flex;
     align-items: center;
@@ -63,7 +65,7 @@ h4 {
     text-decoration: none;
 }
 
-
+/* -------------------------------------- Carousels */
 .carousel {
     background-color: #FFDDD2;
     color: black;
@@ -81,7 +83,7 @@ a.carousel:hover {
     min-height: 200px;
 }
 
-/* from Bulma */
+/* --------------------------------------from Bulma */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -90,6 +92,7 @@ a.carousel:hover {
     width: 1.5rem;
 }
 
+/* --------------------------------------buttons */
 .shop-now-button {
     background: white;
     color: black;
@@ -127,10 +130,6 @@ a.carousel:hover {
 .btn-decline:hover {
     background: #83c5be;
     color: white;
-}
-
-.toast-delivery {
-    background: #83c5be;
 }
 
 .btn-black {
@@ -270,6 +269,11 @@ input[name='q']::placeholder {
 }
 
 /* ------------------------------- bootstrap toasts */
+
+.toast-delivery {
+    background: #83c5be;
+}
+
 .message-container {
     position: fixed;
     top: 72px;
@@ -285,7 +289,7 @@ input[name='q']::placeholder {
     height: 2px;
 }
 
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+/* ------------------------------- from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
     width: 0;
     height: 0;
@@ -303,13 +307,11 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
-/* Allauth form formatting */
+/* ------------------------------- Allauth form formatting */
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem;
-    /* mt-4 */
     color: #6c757d;
-    /* text-secondary */
 }
 
 .allauth-form-inner-content input {
@@ -327,7 +329,6 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-    /* btn */
     display: inline-block;
     font-weight: 400;
     color: #fff;
@@ -344,7 +345,7 @@ input[name='q']::placeholder {
     line-height: 1.5;
     border-radius: 0;
 
-    /* standard bootstrap btn transitions */
+    /* ------------------------------- standard bootstrap btn transitions */
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
@@ -357,10 +358,9 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content a {
     color: #17a2b8;
-    /* text-info */
 }
 
-/* Product Form */
+/* -------------------------------Product Form */
 
 .btn-file {
     position: relative;
@@ -404,7 +404,15 @@ input[name='q']::placeholder {
     }
 }
 
-@media (min-width: 1200px) {}
+@media (min-width: 768px) {
+    h2 {
+        font-size: 2em !important;
+    }
+
+    h3 {
+        font-size: 1.5em !important;
+    }
+}
 
 @media (min-width: 992px) {
     .h1 {
@@ -417,15 +425,5 @@ input[name='q']::placeholder {
 
     h3 {
         font-size: 3em;
-    }
-}
-
-@media (min-width: 768px) {
-    h2 {
-        font-size: 2em !important;
-    }
-
-    h3 {
-        font-size: 1.5em !important;
     }
 }
