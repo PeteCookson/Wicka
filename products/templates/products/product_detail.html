@@ -41,7 +41,7 @@
                         {% if request.user.is_superuser %}
                         <small class="ml-3">
                             <a class="btn btn-super-link" href="{% url 'edit_product' product.id %}">Edit</a>
-                            <a class="btn btn-super-link-delete" href="{% url 'delete_product' product.id %}">Delete</a>
+                            <a class="btn btn-super-link-delete" href="{% url 'confirm_delete_product' product.id %}">Delete</a>
                         </small>
                         {% endif %}
                         <div class="col-12">

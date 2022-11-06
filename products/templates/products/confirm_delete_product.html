@@ -19,7 +19,7 @@
             <form action="{% url 'delete_product' product.id %}" method="POST" enctype="multipart/form-data" class="site-form">
                 {% csrf_token %}
                 <legend class="mx-auto mb-5 mt-2 delete-confirm-legend heading">Are you sure you want to delete the Product "{{ product.name }}" ?</legend>
-                <a href="{% url 'product' %}" class="btn btn-super-link mb-5">Cancel</a>
+                <a href="{% url 'products' %}" class="btn btn-super-link mb-5">Cancel</a>
                 <button class="btn btn-super-link-delete mb-5" type="submit">Delete Product </button>
             </form>
         </div>
