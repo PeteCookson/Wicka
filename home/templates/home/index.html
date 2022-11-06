@@ -3,19 +3,21 @@
 
 {% block content %}
 <!-- Hero -->
-<div class="container hero align-items-center">
-    <div class="row">
-        <div class="col-7">
-            <h1 class="display-2 text-white">
+
+<div class="container-fluid align-items-center hero-image">
+    <div class="row" alt="picnic">
+        <div class="col-sm-6">
+            <h1 class="m-3 display-4 text-white">
                 Luxury arrival hampers
             </h1>
-            <div class="my-5">
-                <a href="{% url 'products' %}" class="btn btn-confirm rounded-lg py-3">Shop Hampers</a>
+            <div class="m-3">
+                <a href="{% url 'products' %}" class="btn shop-now-button rounded-lg py-3">Shop Hampers</a>
             </div>
         </div>
     </div>
 </div>
-<div class="col">
+
+<div class="container">
     <h2 class="text-center py-3">
         Curated & locally sourced wherever your stay, supporting independent startups & producers
     </h2>
