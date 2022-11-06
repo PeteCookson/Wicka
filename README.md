@@ -34,7 +34,7 @@ WICKA - Is a luxury hamper delivery company that creatively sources locally sour
         * [Libraries](#libraries)
         * [Tools](#tools)
         * [Design](#design)
-    * [Bugs & Testing](#bugs-and-testing)
+    * [Testing](#testing)
     * [Deployment](#deployment)
     * [Credits](#credits)
 
@@ -90,14 +90,7 @@ In order to complete the project in time for the deployment and submission deadl
 - Admin priveleges (to manage products and content)
 - Brief page on the Wicka story, vision and ethos.
 
-Features for future releases:
-- Affiliate scheme for hosts through a host_user login, offering discounts for their guests, and earning through their purchases.
-- Referral scheme where guests can earn credit on their account for referring new customers.
-- Location based products.
-- Working with us, Suppliers, FAQ's, Terms and conditions
-- Postcode delivery checker
-- Update to the Blog page to include images and document structure.
-- About page to reflect the quality of product, story, vision and ethos.
+
 
 ## **Structure**
 ---
@@ -274,8 +267,6 @@ The website uses the [Google Fonts](https://fonts.google.com/) library to provid
 - Admin priveleges (to manage products and content)
 - Brief page on the Wicka story, vision and ethos.
 
-## **Existing Features**
----
 ### Elements on all pages:
 ---
 #### Top bar
@@ -426,7 +417,8 @@ Features for future releases:
 - Working with us, Suppliers, FAQ's, Terms and conditions
 - Postcode delivery checker
 - Update to the Blog to include images and document structure
-- About page to reflect the quality of product
+- About page to reflect the quality of product, story, vision and ethos.
+
 ## **Technologies Used** 
 ---
 ### Languages
@@ -472,8 +464,8 @@ The primary languages used throughout the development of this project are:
 ### Other Technologies
 - [Squoosh](https://squoosh.app/) used for image formatting and resizing.
 
-## **Bugs and Testing**
-Bugs & Testing information can be found in the seperate [bugs & testing](/TESTING.md) file.
+## **Testing**
+Testing information can be found in the seperate [testing](/TESTING.md) file.
 
 ## **Deployment**
 This project uses GitHub for version control, GitPod as the cloud-based IDE and Heroku to deploy the site into production. Heroku Postgres is used for the database. [AWS services](https://aws.amazon.com/), which is also a cloud-based platform, is used to store static files and images as Heroku has no files system to store new files.
@@ -684,10 +676,6 @@ Blogs are taken from
 - Data structure and graphic diagram from http://www.graphviz.org
 - Building A Blog Application With Django from https://djangocentral.com/building-a-blog-application-with-django/
 - Adding Comments Model To The Administration Site from https://djangocentral.com/creating-comments-system-with-django/
-<!-- - Send email functionality: 
-    - https://docs.djangoproject.com/en/3.2/topics/email/
-    - https://docs.djangoproject.com/en/3.2/topics/forms/
-    - https://www.youtube.com/watch?v=w4ilq6Zk-08&list=PLXcnmXd-db_hO1v3SLAzVcNieoS_Tcn-6&index=6-->
 
 ### **Acknowledgements**
 - The Code Institute Slack community, has once again throughout this project, been a valuable resource.
