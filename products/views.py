@@ -86,6 +86,7 @@ def edit_product(request, product_id):
 
     return render(request, template, context)
 
+
 @login_required
 def confirm_delete_product(request, product_id):
     """
@@ -98,8 +99,8 @@ def confirm_delete_product(request, product_id):
             request, 'This functionality is only available to store owners')
         return redirect(reverse('home'))
 
-    # Getting the specific blogpost from the db
-    product = get_object_or_404(BlogPost, pk=product_id)
+    # Getting the specific product from the db
+    product = get_object_or_404(Product, pk=product_id)
     context = {
         'product': product,
     }
@@ -107,6 +108,7 @@ def confirm_delete_product(request, product_id):
     template = 'product/confirm_delete_product.html'
 
     return render(request, template, context)
+
 
 @login_required
 def delete_product(request, product_id):
