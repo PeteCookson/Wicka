@@ -40,17 +40,17 @@ Back to [README](README.md)
 <details>
 <summary>HTML validation</summary>
 
-![HTML Validation](/documentation/images/html_validated.png)
+![HTML Validation](/readme_assets/images/html_validated.png)
 </details>
 <br>
 
 ### [Link Checker](https://validator.w3.org/checklink)
-- To check that all links are working and not broken. 
-- The report did not have any issues in final testing.
+- Validation is used to check that all links are working and not broken. 
+- The report has 3 issues relating to links in dummy phone number, email and facebook account used for reference only.
 <details>
 <summary>Link Checker</summary>
 
-![Link Checker]()
+![Link Checker](/readme_assets/images/links_validated.png)
 </details>
 <br>
 
