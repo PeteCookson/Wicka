@@ -105,7 +105,7 @@ def confirm_delete_product(request, product_id):
         'product': product,
     }
 
-    template = 'product/confirm_delete_product.html'
+    template = 'products/confirm_delete_product.html'
 
     return render(request, template, context)
 
