@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<!-- Heading -->
+<div class="container">
+    <div class="row">
+        <div class="col text-center mt-5">
+            <h3 class="text-center my-4 product-name">Confirm Delete Product!</h3>
+            <hr class="w-100 mb-1">
+        </div>
+    </div>
+</div>
+<div class="container form-container-wrapper bg-leaves">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-6 mt-5 text-center">
+            <!-- Form for confirming that the superuser is certain they want to delete the chosen blogpost -->
+            <form action="{% url 'delete_product' product.id %}" method="POST" enctype="multipart/form-data" class="site-form">
+                {% csrf_token %}
+                <legend class="mx-auto mb-5 mt-2 delete-confirm-legend heading">Are you sure you want to delete the Product "{{ product.name }}" ?</legend>
+                <a href="{% url 'blog' %}" class="btn btn-super-link mb-5">Cancel</a>
+                <button class="btn btn-super-link-delete mb-5" type="submit">Delete Product </button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
