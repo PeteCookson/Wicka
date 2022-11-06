@@ -12,8 +12,6 @@ Back to [README](README.md)
   * [Am I Responsive](#am-i-responsive)
 * [Manual testing](#manual-testing)
 
-* [Bugs & Testing resolved](#bugs-&-testing)
-* [Bugs & Testing unresolved](#bugs-&-testing)
 <br>
 <hr>
 
@@ -56,13 +54,13 @@ Back to [README](README.md)
 
 ### [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
 - To test the accessibility and performance of the website. 
-- After testing the site on Lighthouse, there were minor changes that needed to be made, for example
+- After testing the site on Lighthouse, there were minor changes that needed to be made, for example the size of the image on the home page was found to be excessive and some aria labels were missing.
 - After the above changes were made, the overall performance and accessibility have increased. 
 - Additional future changes can be made in optimising images in next-generation formats.
 <details>
 <summary>Lighthouse</summary>
 
-![Lighthouse]()
+![Lighthouse](/readme_assets/images/lighthouse.png)
 </details>
 <br>
 
@@ -99,15 +97,15 @@ Back to [README](README.md)
 * On the Blog page, logged in users can comment on blogs. Superuser has full CRUD functionality, such as creating, updating or deleting blogs.
 
 ### Backend/Admin Panel
-* I have tested the Admin Panel repeatedly since the start of the project development. All the models are working without issues.  
-  I have created, deleted, and updated data in all models without errors. The models have the behavior expected for what they were built for.
-* Whenever a user comments on a post
+* I have tested the Admin Panel and the all models are working without issues.  
+* Full CRUD functionality has been tested in all models without errors. The models have the behavior expected for what they were built for.
+
 
 ### Further testing
-- Usability tests were carried out using #peer-code-review through slack, friends and family to analyse the User Experience and to determine and report any issues. 
+- Usability tests were carried out using #peer-code-review through slack, friends and family to analyse the User Experience and to determine any issues. 
 
 ### Browser Compatibility
-To ensure a broad range of users can successfully use this site, I tested it across 3 major browsers in both desktop and mobile configuration. Review of all functionality and responsiveness on different desktop browsers, the website displayed correctly in all browsers used. The following browsers were used for testing:
+To ensure a wide range of accessibility on this site, I tested it with 3 browsers, on both desktop and mobile configuration. All functionality and responsiveness on different desktop browsers displayed correctly. The following browsers were used for testing:
 - Chrome
 - Firefox 
 - Safari
@@ -125,7 +123,7 @@ Chrome DevTools was used for testing different sized screens throughout the buil
 - iPad
 - iPad Pro
 
-The site has been tested throughout the build on these physical screens"
+The site has been tested throughout the build on these physical screens:
 - iPhone SE
 - iPhone XSmax
 - Macbook Pro Retina 13'
@@ -142,4 +140,4 @@ The site has been tested throughout the build on these physical screens"
 
 <hr>
 
-Back to [README](README.md)
+Back to [README](/README.md)
