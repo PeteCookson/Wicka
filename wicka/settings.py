@@ -32,7 +32,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['wicka-hampers.herokuapp.com', 'localhost']
 
-CSRF_TRUSTED_ORIGINS = ['https://wicka-hampers.herokuapp.com', 'https://8000-petecookson-wicka-r457agpep62.ws-eu74.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://wicka-hampers.herokuapp.com',
+                        'https://8000-petecookson-wicka-r457agpep62.ws-eu74.gitpod.io']
 
 
 # Application definition
@@ -55,7 +56,7 @@ INSTALLED_APPS = [
     'profiles',
     'blog',
     'about',
-    
+
     # Other
     'crispy_forms',
     'storages',
@@ -159,7 +160,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 
 # Internationalization
