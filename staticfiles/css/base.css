@@ -1,0 +1,438 @@
+/* -------------------------------------- set height */
+html {
+    height: 100%;
+}
+
+body {
+    height: auto;
+    color: #555;
+    font-family: 'Merriweather', sans-serif;
+}
+
+/* -------------------------------------- fonts */
+h1 {
+    font-size: 15vw;
+}
+
+h2 {
+    font-size: 1em;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 1em;
+    font-weight: 300;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+.logo {
+    width: 15vh;
+    height: auto;
+}
+
+/* -------------------------------------- hero */
+.hero-image {
+    max-width: 100%;
+    height: 50vh;
+    background-image: url('/media/homepage-background-cropped.webp');
+    background-repeat: no-repeat;
+    background-position: 54% 46%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* -------------------------------------- Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-item,
+.best-sellers {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: black;
+}
+
+.navbar-item:hover {
+    color: #006D77;
+    text-decoration: none;
+}
+
+/* -------------------------------------- Carousels */
+.carousel {
+    background-color: #FFDDD2;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+a.carousel:hover {
+    color: #006D77;
+    text-decoration: none;
+}
+
+#client-testimonial-carousel {
+    min-height: 200px;
+}
+
+/* --------------------------------------from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/* --------------------------------------buttons */
+.shop-now-button {
+    background: white;
+    color: black;
+    min-width: auto;
+    font-family: 'lato';
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.btn-confirm {
+    background: #E29578;
+    color: white !important;
+    min-width: auto;
+    font-family: 'lato';
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.primaryAction {
+    background: #E29578;
+    color: white !important;
+    min-width: auto;
+    font-family: 'lato';
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.btn-confirm:hover {
+    background: white;
+    color: #E29578 !important;
+    border: 1px solid #E29578;
+}
+
+.btn-decline {
+    background: white;
+    color: #83c5be;
+    min-width: auto;
+    font-family: 'lato';
+    font-weight: 400;
+    text-transform: uppercase;
+    border: 1px solid #83c5be;
+}
+
+.btn-decline:hover {
+    background: #83c5be;
+    color: white;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.btn-super-link {
+    background: black;
+    color: white;
+    min-width: auto;
+    font-family: 'lato';
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.btn-super-link:hover {
+    background: #006d77;
+    color: white;
+}
+
+.btn-super-link-delete {
+    background: black;
+    color: white;
+    min-width: auto;
+    font-family: 'lato';
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.btn-super-link-delete:hover {
+    background: red;
+    color: black;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #006D77;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.remove-item {
+    cursor: pointer;
+}
+
+.product-name {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.card {
+    border-radius: 5px;
+    margin: 30px;
+    padding: 0;
+    box-shadow: 2px 2px 5px;
+
+}
+
+/* -------------------------------- Index */
+
+.client-name.footer {
+    font-style: italic;
+}
+
+/* -------------------------------- Footer */
+
+.footer {
+    background-color: #006D77;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.phone:hover,
+.fa-phone:hover,
+.email:hover,
+.fa-envelope-open:hover,
+.footer-links a:hover,
+.social a:hover {
+    color: #E29578;
+    text-decoration: none;
+}
+
+.phone,
+.email,
+.footer-links a,
+.social a {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+}
+
+.social i {
+    font-size: 1.5rem;
+    padding-left: 4rem;
+}
+
+.social {
+    color: white;
+}
+
+.social {
+    padding-top: 23px;
+}
+
+.phone,
+.email {
+    color: white;
+}
+
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
+/* ------------------------------- bootstrap toasts */
+
+.toast-delivery {
+    background: #83c5be;
+}
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+/* ------------------------------- from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* ------------------------------- Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    color: #6c757d;
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #000;
+    border: 1px solid #000;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* ------------------------------- standard bootstrap btn transitions */
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {
+    color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+.allauth-form-inner-content a {
+    color: #17a2b8;
+}
+
+/* -------------------------------Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
+
+/* -------------------------------- Media Queries */
+@media (min-width: 576px) {
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    .logo {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 2em !important;
+    }
+
+    h3 {
+        font-size: 1.5em !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 3em;
+    }
+}
