@@ -1,5 +1,5 @@
 asgiref==3.5.2
-backports.zoneinfo==0.2.1; python_version <= '3.9'
+backports.zoneinfo==0.2.1; python_version < '3.9'
 boto3==1.24.86
 botocore==1.27.96
 chardet==5.0.0
