@@ -1,4 +1,4 @@
-# [WICKA](https://wicka-hampers.herokuapp.com/)
+# [WICKA](https://wicka-hampers.onrender.com/)
 
 This website is designed and created for the Full Stack Frameworks with Django Milestone Project, for Code Institute's Diploma in Web Application Development.
 The objective for this milestone project is to plan, design and develop a project with all the functionalities to work as an fully operational e-commerce website.
@@ -7,7 +7,7 @@ WICKA - Is a luxury hamper delivery company that creatively sources locally sour
 
 ![Responsive Mockup](/readme_assets/images/responsive.png)
 
-**View the live [website](https://wicka-hampers.herokuapp.com/)**
+**View the live [website](https://wicka-hampers.onrender.com/)**
 
 <br>
 <hr>
