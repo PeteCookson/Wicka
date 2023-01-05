@@ -37,7 +37,7 @@ if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 CSRF_TRUSTED_ORIGINS = ['https://wicka-hampers.onrender.com',
-                        'https://8000-petecookson-wicka-r457agpep62.ws-eu74.gitpod.io']
+                        'https://8000-petecookson-wicka-r457agpep62.ws-eu81.gitpod.io']
 
 
 # Application definition
