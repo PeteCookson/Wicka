@@ -475,7 +475,7 @@ The below steps are specific to Gitpod therefore depending on your IDE, you migh
 ### To clone the project:
 From the application's repository, click the "code" button and download the zip of the repository. Alternatively, you can clone the repository using the following line in your terminal: 
 ```
-git clone https://github.com/Franciskadtt/happybean.git
+git clone https://github.com/PeteCookson/wicka.git
 ```
 
 #### To install required software:
@@ -551,7 +551,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
     ```
 - Create a Procfile and inside, add the following:
     ```
-    web: gunicorn happybean.wsgi:application
+    web: gunicorn wicka.wsgi:application
 - In `settings.py`, use an if statement so that when the app runs on Heroku, you will connect to Postgres, and otherwise, it will connect to sqlite3, like so:
     ```
     if 'DATABASE_URL' in os.environ:
@@ -580,7 +580,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
     ```
 - Login to Heroku in the CLI and temporarity disable collectstatic, with the following command:
     ```
-    heroku config:set DISABLE_COLLECTSTATIC=1 --app happybean
+    heroku config:set DISABLE_COLLECTSTATIC=1 --app wicka
     ```
 - Add your Heroku app and local host to allowed hosts in `settings.py.`
 - Push to Github, and then to Heroku master. 
@@ -609,10 +609,10 @@ Create an account with [AWS](www.aws.amazon.com), follow the steps and sign in.
 ```
 - Go to the Bucket policy tab and click 'policy generator', to create a policy. Choose 's3 bucket policy', allow all principals by typing a star. From the action dropdown menu select 'GetObject'. Copy the ARN and paste it into the ARN box. Then click 'add statment' and then click 'generate policy'. Copy the policy into the bucket policy editor. Add a slash star onto the end of the resource key. Click 'save'. 
 - Go to access control list tab, under public access, click on 'Everyone', select 'List Objects'. Then click 'save'. 
-- Go to IAM (from services menu), click on 'groups' and create a new user group. Give the group a group name (f.e. 'manage-happybean'). Then click 'create group'. 
+- Go to IAM (from services menu), click on 'groups' and create a new user group. Give the group a group name (f.e. 'manage-wicka'). Then click 'create group'. 
 - Click 'policies' in the dashboard, and then click 'create policy'. Go to the JSON tab. Click 'import managed policy'. Import 'AmazonS3FullAccess'. Get the bucket ARN from the bucket policy page in S3, and paste that in after 'Resource', as a list (first the ARN, then also the ARN with a slash and star). Click 'next tags' and then 'next review'. Give it a name and description. Click 'create policy'. 
-- Go to 'groups'. Click the manage-happybean group. Go to 'permissions'. Click 'attach policy'. Select the policy you just created. Click 'add permissions' and then 'Attach policy'.
-- Go to 'users'. Click 'add user'. As username write 'happybean-staticfiles-user. Give programmatic access. Click 'next'. Add the user to the group. Click through to the end. Download the .csv file. 
+- Go to 'groups'. Click the manage-wicka group. Go to 'permissions'. Click 'attach policy'. Select the policy you just created. Click 'add permissions' and then 'Attach policy'.
+- Go to 'users'. Click 'add user'. As username write 'wicka-staticfiles-user. Give programmatic access. Click 'next'. Add the user to the group. Click through to the end. Download the .csv file. 
 
 ### **Connecting to DJANGO to S3**
 - Go back to GitPod. Install boto3 and Django storages, and freeze them to the requirement file with the following commands:
@@ -625,7 +625,7 @@ Create an account with [AWS](www.aws.amazon.com), follow the steps and sign in.
 - Add the following if statement:
     ```
     if 'USE_AWS' in os.environ:
-        AWS_STORAGE_BUCKET_NAME = 'happybean'
+        AWS_STORAGE_BUCKET_NAME = 'wicka'
         AWS_S3_REGION_NAME = 'eu-west-1'
         AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
         AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
