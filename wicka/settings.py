@@ -28,6 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '*')
 # SECURITY WARNING: don't run with debug turned on in production!
 
 DEBUG = 'DEVELOPMENT' in os.environ
+# DEBUG = True
 
 ALLOWED_HOSTS = ['wicka-hampers.onrender.com', 'localhost']
 
@@ -37,7 +38,7 @@ if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 CSRF_TRUSTED_ORIGINS = ['https://wicka-hampers.onrender.com',
-                        'https://8000-petecookson-wicka-r457agpep62.ws-eu81.gitpod.io']
+                        'https://8000-petecookson-wicka-r457agpep62.ws-eu96.gitpod.io']
 
 
 # Application definition
