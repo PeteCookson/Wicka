@@ -134,7 +134,7 @@ The site has been tested throughout the build on these physical screens:
 <hr>
 
 ## **Deployment**
-- Ensured deployed page on Heroku loads up correctly.
+- Ensured deployed page on Render loads up correctly.
 - Ensured Debug variable is set to False.
 - Confirmed that there is no difference between the deployed version and the development version.
 

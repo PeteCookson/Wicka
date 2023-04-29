@@ -1,4 +1,4 @@
-# [WICKA](https://wicka-hampers.onrender.com/)
+![Wicka logo](/media/wicka_logo.webp)
 
 This website is designed and created for the Full Stack Frameworks with Django Milestone Project, for Code Institute's Diploma in Web Application Development.
 The objective for this milestone project is to plan, design and develop a project with all the functionalities to work as an fully operational e-commerce website.
@@ -98,7 +98,7 @@ In order to complete the project in time for the deployment and submission deadl
 A database structure was designed to be specifically suited for Wicka. It was important to make sure the data structure was logical. Each product is identified by a unque sku.
 Each order has a unique order number which is generated when the order is processed and orders have the users and product details.
 Users have the option to purchase products as guest users or as registered users. Guest users can complete the order process but their details will not be saved, they won’t be able to see a profile with their details, order history and shipping details. A Registered user will not only have access to their profile but will also have their details pre-populated the next time they shop. 
-SQLite, which is Django built-in database is used for development mode and Heroku Postgres is used for production mode. AWS (Amazon Web Services) is used to hold all static files and folders for the website for production mode.
+SQLite, which is Django built-in database is used for development mode and Render Postgres is used for production mode. AWS (Amazon Web Services) is used to hold all static files and folders for the website for production mode.
 
 <details>
 <summary>Data Schema</summary
@@ -437,7 +437,7 @@ The primary languages used throughout the development of this project are:
 - [Hover.css](https://cdnjs.com/libraries/hover.css/2.1.0) to apply hover effects to the projects navbar.
 - [Django](https://www.djangoproject.com/) (an open-source web framework) as the main framework of Python
 - [SQLite](https://www.sqlite.org/index.html) (Django built-in database) as a database in development mode
-- [PostgreSQL](https://landing.aiven.io/en/aiven-for-postgresql/) (Heroku built-in) as a database in production mode
+- [PostgreSQL](https://landing.aiven.io/en/aiven-for-postgresql/) (Render built-in) as a database in production mode
 - [Stripe](https://stripe.com/en-ie) for credit card payment
 - [AWS](https://aws.amazon.com/) (Amazon Web Services) for hosting static files and images for the website
 
@@ -446,7 +446,7 @@ The primary languages used throughout the development of this project are:
 - [Gitpod](https://www.gitpod.io/) as Integrated Development Environment (IDE)
 - [Git](https://git-scm.com/) for local version control, keeping the files & documents
 - [GitHub](https://github.com/) for online version control and keeping the files & documents
-- [Heroku](https://www.heroku.com/) for deploying the website
+- [Render](https://www.onrender/) for deploying the website
 - [Responsinator](http://www.responsinator.com/) - to determine if the site was responsive to various devices.
 - [Am I Responsive](http://ami.responsivedesign.is/#) to view images of the website on different devices if the site was responsive to various devices.
 - Chrome DevTools to help edit pages and diagnose problems quickly.
@@ -468,7 +468,7 @@ The primary languages used throughout the development of this project are:
 Testing information can be found in the seperate [testing](/TESTING.md) file.
 
 ## **Deployment**
-This project uses GitHub for version control, GitPod as the cloud-based IDE and Heroku to deploy the site into production. Heroku Postgres is used for the database. [AWS services](https://aws.amazon.com/), which is also a cloud-based platform, is used to store static files and images as Heroku has no files system to store new files.
+This project uses GitHub for version control, GitPod as the cloud-based IDE and Render to deploy the site into production. Render Postgres is used for the database. [AWS services](https://aws.amazon.com/), which is also a cloud-based platform, is used to store static files and images as Render has no files system to store new files.
 
 The below steps are specific to Gitpod therefore depending on your IDE, you might need to adjust the below steps. 
 
@@ -527,15 +527,15 @@ KEY = 'USE_AWS', VALUE: 'True'
 DEBUG = 'DEVELOPMENT' in os.environ
 ```
 
-### **Heroku Deployment**
-- Go to the [Heroku](https://www.heroku.com/) website. Register for an account and click on "Create a new app".
-- Setup a Heroku app within the Heroku dashboard - Type in the app name and select region the click on create app.
-- In Heroku, in your app, click on "GitHub" to connect to your repository. Type in the repository name as on GitHub. Click on "Connect".
+### **Render Deployment**
+- Go to the [Render](https://www.onrender/) website. Register for an account and click on "Create a new app".
+- Setup a Render app within the Render dashboard - Type in the app name and select region the click on create app.
+- In Render, in your app, click on "GitHub" to connect to your repository. Type in the repository name as on GitHub. Click on "Connect".
 - Search for your repo (or sign in and connect GitHub account) and select this.
-- Then click "Hide Config Vars" in Heroku.
-- Go to the resources tab and search for Heroku Postgres. Choose the “hobby dev - free” option and submit the order form.
+- Then click "Hide Config Vars" in Render.
+- Go to the resources tab and search for Render Postgres. Choose the “hobby dev - free” option and submit the order form.
 - On the `settings.py file`, you will need to comment out the 'SQLite and Postgres databases' section and uncomment the 'PostgreSQL Database' section. (this is temporary, nothing should be pushed/committed just yet).
-- Add the database URL from Heroku & migrate your models to the PostgreSQL database with: 
+- Add the database URL from Render & migrate your models to the PostgreSQL database with: 
     ```
     python3 manage.py migrate
     ```
@@ -552,7 +552,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 - Create a Procfile and inside, add the following:
     ```
     web: gunicorn wicka.wsgi:application
-- In `settings.py`, use an if statement so that when the app runs on Heroku, you will connect to Postgres, and otherwise, it will connect to sqlite3, like so:
+- In `settings.py`, use an if statement so that when the app runs on Render, you will connect to Postgres, and otherwise, it will connect to sqlite3, like so:
     ```
     if 'DATABASE_URL' in os.environ:
         DATABASES = {
@@ -566,7 +566,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
             }
         }
     ```
-- Copy the variables from the variable enviroment one by one into the heroku config vars. They would be:
+- Copy the variables from the variable enviroment one by one into the render config vars. They would be:
    ```
     KEY: 'SECRET_KEY', VALUE: “your_variable_here”
     KEY: 'DEVELOPMENT', VALUE: "True"
@@ -578,13 +578,13 @@ DEBUG = 'DEVELOPMENT' in os.environ
     KEY: AWS_SECRET_ACCESS_KEY, VALUE: "AWS secret access key"
     KEY: USE_AWS, VALUE: "True"
     ```
-- Login to Heroku in the CLI and temporarity disable collectstatic, with the following command:
+- Login to Render in the CLI and temporarity disable collectstatic, with the following command:
     ```
-    heroku config:set DISABLE_COLLECTSTATIC=1 --app wicka
+    render config:set DISABLE_COLLECTSTATIC=1 --app wicka
     ```
-- Add your Heroku app and local host to allowed hosts in `settings.py.`
-- Push to Github, and then to Heroku master. 
-- In Heroku, go to the 'Deploy' tab. In the section 'Deployment Method' click on 'Github - Connect to Github'. Make sure your Github profile is displayed. Add the repository name and click on 'Search'. After Heroku has found the repository, click on 'Connect'. This will connect your Heroku app to your GitHub repository. Click 'Enable automatic deploys'. Your code will automatically be deployed to Heroku as well. 
+- Add your Render app and local host to allowed hosts in `settings.py.`
+- Push to Github, and then to Render master. 
+- In Render, go to the 'Deploy' tab. In the section 'Deployment Method' click on 'Github - Connect to Github'. Make sure your Github profile is displayed. Add the repository name and click on 'Search'. After Render has found the repository, click on 'Connect'. This will connect your Render app to your GitHub repository. Click 'Enable automatic deploys'. Your code will automatically be deployed to Render as well. 
 
 ### **AWS (Amazon Web Services)**
 Create an account with [AWS](www.aws.amazon.com), follow the steps and sign in. 
@@ -631,7 +631,7 @@ Create an account with [AWS](www.aws.amazon.com), follow the steps and sign in.
         AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
         AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
     ```
-- On Heroku, add the AWS keys to the Config Variables (they can be found in the csv file you downloaded earlier). Also, add USE_AWS and set it to True. 
+- On Render, add the AWS keys to the Config Variables (they can be found in the csv file you downloaded earlier). Also, add USE_AWS and set it to True. 
 - Remove the DISABLE_COLLECTSTATIC from the variables. 
 - In GitPod, create a file called custom_storages.py and add:
     ```
@@ -657,7 +657,7 @@ Create an account with [AWS](www.aws.amazon.com), follow the steps and sign in.
     ```
 - Add, commit and push these changes. If you now go to the bucket, you will see all the static files. 
 - Go to your bucket and add a new folder called media. Inside it, click 'upload' and then 'add files'. Then select all the images you'd like to use. Click 'next'. Under 'manage public permissions', select 'grant public read access'.
-- On Stripe, add a new webhook endpoint, with the URL of your Heroku app, followed by 
+- On Stripe, add a new webhook endpoint, with the URL of your Render app, followed by 
 ```/checkout/wh/```. Select 'receive all events' and click 'add endpoint'.
 ## **Credits**
 Product images and descriptions is from the following source:
