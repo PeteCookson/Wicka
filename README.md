@@ -1,4 +1,4 @@
-![Wicka logo](/media/wicka_logo.webp)
+![wicka logo](/readme_assets/images/wicka-logo-small.jpeg)
 
 This website is designed and created for the Full Stack Frameworks with Django Milestone Project, for Code Institute's Diploma in Web Application Development.
 The objective for this milestone project is to plan, design and develop a project with all the functionalities to work as an fully operational e-commerce website.
@@ -239,7 +239,7 @@ The colors used throughout the webite have been chosen to reflect a clean, natur
 
 ### **Typography**
 
-The website uses the [Google Fonts](https://fonts.google.com/) library to provide the fonts Raleway is used for the logo Lato and Merriweather are used in combination for headings, labels and body copy.
+The website uses the [Google Fonts](https://fonts.google.com/) library to provide the fonts Raleway is used for the logo, Lato and Merriweather are used in combination for headings, labels and body copy.
 
 <details>
 <summary>Body</summary>
@@ -661,7 +661,7 @@ Create an account with [AWS](www.aws.amazon.com), follow the steps and sign in.
 ```/checkout/wh/```. Select 'receive all events' and click 'add endpoint'.
 ## **Credits**
 Product images and descriptions is from the following source:
-- https://www.fortnumandmason.com/
+- [Fortnum & Mason](https://www.fortnumandmason.com/)
 
 ### **Content**
 Blogs are taken from 
